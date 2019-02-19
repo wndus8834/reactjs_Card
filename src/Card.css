@@ -1,0 +1,35 @@
+.card {
+    padding: 10px;
+    border: 1px dashed lightgray;
+    margin: 10px;
+    width: 300px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.current {
+    background-color: yellow;
+}
+
+.card .userId {
+    background-color: crimson;
+    color:white;
+    font-weight: bold;
+    display: inline-block;
+    padding: 5px;
+    border-radius: 10px 10px;
+    border: 1px solid lightgray;
+}
+
+.card .userName {
+    display: inline-block;
+    font-size: 1.3em;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.card .details {
+    word-wrap: break-word;
+font-size: 0.8em;
+}
+
