@@ -10,7 +10,6 @@ class App extends React.Component {
             list: [],
             currentPage: 0,
             perPage: 3,
-            currentId: null,
         }
     }
 
@@ -25,16 +24,10 @@ class App extends React.Component {
         let part = DataSource.list1().slice(start, start + this.state.perPage);
         this.setState({ currentPage: this.state.currentPage + 1, list: this.state.list.concat(part) });
     }
-
-    // 클릭시 처리
-    handleClick(id) {
-        this.setState({ currentId: id });
-    }
-
     render() {
 
         let list = this.state.list.map(r => {
-            return <Card key={r.id} isCurrent={this.state.currentId === r.id} value={r} onClick={this.handleClick.bind(this,r.id)} />;
+            return <Card key={r.id} value={r} />;
         })
 
         return <div>
